@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh; /* es el 100% de la pantalla */
+    background-color: rgba(255, 255, 255, 0.182);
+
+    /*para centrar todos los elementos: */
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    background-color: #363e43; /*#48bfff; */
+    color: white; /*para las letras*/
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;/*espacio entre los botones y el resto de la calculadora*/
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);/*4 columnas y cada una tendrá 1 fracción*/
+    gap: 0.5rem; /*espacio entre botones*/
+    /*box-shadow: 0 0 20px #48bfff;*/ /*para darle sombra alrededor*/
+}
+
+.containerpantalla{
+    grid-column: 1 / 5;/*El elemento de la cuadrícula abarca 5 columnas.*/
+    background-color: #090c3177;
+    padding: 1.5rem; /*espacio entre el contenido y el fondo*/
+    font-size: 2rem; /*tamaño del 0*/
+    text-align: right; /*0 a la derecha*/
+    border-radius:.5rem; /*redondear las esquinas*/
+    margin-bottom: 1.5rem;/*margen entre la pantalla y los botones*/
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.btn{
+    background-color: #58aedc3b;
+    color: white;
+    border: 0; /*quitar borde*/
+    padding: 1.5rem .5rem; /* arriba y abajo 1.5rem */
+     /* a los lados .5rem*/
+    display: flex;
+    justify-content: center; /*para que se centren todos los botones*/
+    align-items: center; /*para q se centren todos los botones verticalmente*/
+    border-radius: .5rem;
+    cursor: pointer; /*el puntero cambia a manito cc se pasa por el boton*/  
+    font-weight: bold;
+}
+
+/*hover se usa para cuando pase por los botones, cambie de color*/
+.btn:hover{
+    background-color: #004e783b;    
+}
+
+#cero{
+    grid-column: span 2; /*expanda 2 columnas*/
+}
+
+#igual{
+    grid-row: span 2; /*expanda 2 filas*/
+    background-color: #e65766;
+}
+
+#igual:hover{
+    background-color: #e6394a;
+}
+
+
